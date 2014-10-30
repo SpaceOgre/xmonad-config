@@ -1,0 +1,20 @@
+#!/bin/sh
+# Script to configure X, start common apps, and start xmonad.
+# Author: Vic Fryzel
+# http://github.com/vicfryzel/xmonad-config
+
+# Configure X
+xsetroot -cursor_name left_ptr &
+xrdb -merge $HOME/.Xdefaults &
+
+# Use to set background image
+# Start without window, but will have a desktop
+# Quit nautilus to close desktop but background image remain
+# nautilus -n & nautilus -q
+
+# Start one terminal
+xterm &
+
+# Start xmonad
+#exec ck-launch-session dbus-launch --sh-syntax --exit-with-session xmonad
+xmonadcase 
